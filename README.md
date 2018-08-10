@@ -80,9 +80,6 @@ if [ -s "$HOME/.nvm/nvm.sh" ] && [ ! "$(whence -w __init_nvm)" = function ]; the
 fi
 ```
 
-### Install Gulp CLI
-- Follow the Gulp docs [here](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md).
-
 ### Aliases
 Just to test out using aliases, I picked a few things I type a lot into the terminal that could save me some keystrokes. Add this to your .zshrc file to do the same and add anything else you see fit:
 ```
@@ -105,29 +102,9 @@ export EDITOR="$VISUAL"
 ### Always Update & Upgrade
 Every few days it's a good idea to run `sudo apt update` then `sudo apt upgrade` to get the latest updates from Ubuntu.
 
-### Shopify Themekit
-I've recently been getting into Shopify and ran into a bit of a snag when using their [ThemeKit](https://shopify.github.io/themekit/) via the WSL. After creating a theme or downloading an existing one, then trying to run `theme open` to view changes. This command tries to open a browser with xdg-open - which doesn't work. What you'll need to do is create a shell script to get around this. Seeing as I didn't know how to create one prior to this, I'll add the details below:
-- First, navigate to `usr/local/bin` as we'll need the script in here so it can be executed.
-- Second, we'll need writing access, so write `sudo vi xdg-open` to create the file.
-- Third, paste this into the file then save and exit:
-```
-#!/bin/sh
-# shell script for shopify theme kit/xdg-open to open browser. 
-# replace firefox.exe with the browser of your choice.
-cmd.exe /c start firefox.exe $1
-```
-- Fourth, you'll need to make the file executable. So write `sudo chmod +x xdg-open` and then you're good to go! Just head back to your directory and run `theme open` to test.
-
----
-
 ### Notes
-- I had trouble with Node/npm/Gulp before realising Ubuntu won’t automatically upgrade from 14.04 to 16.04 - as mentioned in this [article](https://blogs.msdn.microsoft.com/commandline/2017/04/11/windows-10-creators-update-whats-new-in-bashwsl-windows-console/). If you’re in the same boat, upgrade via these [instructions](https://help.ubuntu.com/lts/serverguide/installing-upgrading.html).
-- I also had trouble with older versions of Windows 10 not liking Gulp via the WSL - inotify and socket issues. Make sure you're running on the Creators Update or Insiders Program versions.
 - A lot of Hyper plugins don't work with Windows so make sure to check before installing them.
 - If you're having trouble with Ruby and it's sudo/gem issues, look at Ruby Version Manager as an alternative.
 
-### Easter Eggs
-A few goodies I installed recently for fun:
-- Cowsay `sudo apt-get install cowsay`
-- htop `sudo apt-get install htop`
+### Extras
 - Isn't via apt-get but [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets) is great
