@@ -10,10 +10,8 @@
 #ZSH_THEME="refined"
 ZSH_THEME="minimal"
 
-#Change ls colours
-LS_COLORS="ow=01;36;40" && export LS_COLORS
-#
-##make cd use the ls colours
+#Change ls coloursLS_COLORS="ow=01;36;40" && export LS_COLORS
+###make cd use the ls colours
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 autoload -Uz compinit
 compinit
@@ -70,7 +68,8 @@ compinit
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  git,
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -103,3 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export NVM_DIR="/home/space/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
