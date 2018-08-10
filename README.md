@@ -5,8 +5,6 @@ After a few headaches with running the Git Bash on Windows I’ve decided to mov
 
 Here’s a breakdown of how I got up and running below:
 
-![Shell Screenshot](shell.png "Shell Screenshot")
-
 ### Download & Install the WSL
 - Follow the very thorough instructions [here](https://msdn.microsoft.com/en-au/commandline/wsl/install_guide)
 
